@@ -46,6 +46,16 @@
     <!-- technology icon Stylesheets -->
     <link rel="stylesheet" href="main/technology-icon/flaticon.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+
+
+
+
+
+
 
 
 
@@ -363,31 +373,19 @@
                         <!-- end navbar -->
 
                     </div>
-                    <!-- end collapse navbar -->
+
 
                     <!-- start header account  -->
                     <ul class="account-place-header-nav">
                         <li class="nav-item dropdown">
-                            <a data-toggle="dropdown" aria-haspopup="true" id="customarea" aria-expanded="false" class="accouting-h dropdown-toggle" href="#">
-                                <img src="main/img/svgs/avatar.svg" alt="" /></a>
-                            <div class="dropdown-menu login-drop-down-header" aria-labelledby="customarea">
+                            @if (Route::has('login'))
 
-                                <form action="#" data-form="validate">
+                            <a data-toggle="dropdown" aria-haspopup="true" id="customarea" aria-expanded="false" class="accouting-h dropdown-toggle" href="{{ route('login') }}"><img src="main/img/svgs/avatar.svg" alt="" /></a>
+                            @auth
+                            @else
+                            @endauth
+                            @endif
 
-                                    <div class="form-group">
-                                        <input type="email" name="username" placeholder="Your Email" class="form-control" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="password" name="password" placeholder="Password" class="form-control" required>
-                                    </div>
-
-                                    <p class="help-block"><a href="#">Forgot Your Password?</a> <a href="#">Sign up</a></p>
-                                    <button type="submit" class="btn btn-block btn-default text-uppercase">Login</button>
-
-                                </form>
-
-                            </div>
                         </li>
                     </ul>
                     <!-- end header account  -->
@@ -468,38 +466,51 @@
         <div class="mt-auto"></div>
     </div><!-- end header -->
 
-    <section class="first-items-home">
-        <!-- section services -->
-        <div class="container">
-            <div class="row justify-content-left">
-                <div class="col-md-4 item-icons">
-                    <span class="free-badje">free</span><!-- free badge -->
-                    <span class="nomber-overlow"><b>01</b></span><!-- service number -->
-                    <i class="icon flaticon-bug color-1"></i><!-- service icon -->
-                    <h5>Full Security Team</h5><!-- service title -->
-                    <p>Solution is an easy to use tool all very easy! eCommerce. With the help of our system you can present.</p><!-- service text -->
-                    <div class="badje-link-footer"><a href="#">see more <i class="far fa-arrow-alt-circle-right"></i> </a></div><!-- service link -->
-                </div>
+    <div class="container">
 
-                <div class="col-md-4 item-icons">
-                    <span class="nomber-overlow"><b>02</b></span><!-- service number -->
-                    <i class="icon flaticon-chip color-2"></i><!-- service icon -->
-                    <h5>Analytics</h5>
-                    <p>Solution is an easy to use tool all very easy! eCommerce. With the help of our system you can present.</p><!-- service text -->
-                    <div class="badje-link-footer"><a href="#">see more <i class="far fa-arrow-alt-circle-right"></i> </a></div><!-- service link -->
-                </div>
+        <section class="second-items-home">
+            <div class="tittle-simple-one">
+                <b>
+                    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Percayakan Pada Jagoan Hosting </h1>
+                </b>
+            </div><!-- title -->
+            <!-- starts our pertners section -->
+            <div class="container">
+                <!-- CONTAINER -->
 
-                <div class="col-md-4 item-icons">
-                    <span class="nomber-overlow"><b>03</b></span><!-- service number -->
-                    <i class="icon flaticon-063-flashlight color-3"></i><!-- service icon -->
-                    <h5>Analytics</h5><!-- service title -->
-                    <p>Solution is an easy to use tool all very easy! eCommerce. With the help of our system you can present.</p><!-- service text -->
-                    <div class="badje-link-footer"><a href="#">see more <i class="far fa-arrow-alt-circle-right"></i> </a></div><!-- service link -->
-                </div>
+                <div class="owl-carousel pertners-carousel owl-theme">
+                    <!-- start owl carousel -->
+                    <div class="item">
+                        <!-- start item -->
+                        <a href="#"> <img style="max-height: 7rem;" src="https://www.jagoanhosting.com/wp-content/uploads/2019/11/1.png.webp" alt="" /> </a>
+                    </div><!-- end item -->
 
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </section><!-- end section services -->
+                    <div class="item">
+                        <!-- start item -->
+                        <a href="#"> <img style="max-height: 7rem;" src="https://www.jagoanhosting.com/wp-content/uploads/2019/11/2.png.webp" alt="" /> </a>
+                    </div><!-- end item -->
+
+                    <div class="item">
+                        <!-- start item -->
+                        <a href="#"> <img style="max-height: 7rem;" src="https://www.jagoanhosting.com/wp-content/uploads/2021/02/Value-Manrs-1024x594.png.webp" alt="" /> </a>
+                    </div><!-- end item -->
+
+                    <div class="item">
+                        <!-- start item -->
+                        <a href="#"> <img style="max-height: 7rem;" src="https://www.jagoanhosting.com/wp-content/uploads/2019/11/5.png.webp" alt="" /> </a>
+                    </div><!-- end item -->
+
+                    <div class="item">
+                        <!-- start item -->
+                        <a href="#"> <img style="max-height: 7rem;" src="https://www.jagoanhosting.com/wp-content/uploads/2021/02/Value-uptime.png.webp" alt="" /> </a>
+                    </div><!-- end item -->
+
+                </div><!-- end owl carousel -->
+
+            </div><!-- end CONTAINER -->
+        </section><!-- end our pertners section -->
+    </div>
+
 
 
 
@@ -508,7 +519,11 @@
         <div class="container">
             <!-- start container -->
             <div class="tittle-simple-one">
-                <h5>Chose your best pricing plan<span>you want custom hosting plan.<br> No hidden charge.</span></h5>
+                <b>
+                    <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        Hosting dan Cloud Service Jagoan Hosting </h2>
+                </b>
+                <span>Jangan Ragu, Sob! Kami Sediakan Khusus Buat Kamu Layanan Terbaik.<br> Tentunya Dengan Harga Yang Sepadan</span>
             </div><!-- title -->
 
             <div class="mr-tp-70 mr-bt-50">
@@ -520,10 +535,7 @@
                     </div>
                     <!-- end plan price changer -->
 
-                    <div class="col align-self-end plan-contact-support-button text-right">
-                        <!-- start plan support -->
-                        <a href="#"><i class="far fa-life-ring"></i> 00123 456 78 90 11</a>
-                    </div>
+
                     <!-- start plan support -->
                 </div>
 
@@ -531,17 +543,27 @@
                     <!--------------------------------------------- first plan --------------------------------------------->
                     <div class="col-md-4">
                         <!-- tree steps hosting plan -->
-                        <div class="tree-steps-hosting-plans first">
+                        <div class="tree-steps-hosting-plans second">
+                            <span class="tree-steps-hosting-plans-best">best plan</span>
                             <div class="tree-steps-hosting-plans-header">
+
                                 <i class="fas fa-fire tree-steps-hosting-plans-icon"></i>
-                                <h5 class="tree-steps-hosting-plans-title">standard plan <small>for small projects</small></h5>
+                                <h5 class="tree-steps-hosting-plans-title">Unlimited Hosting
+                                    <small>Unlimited Web Hosting paling murah se Indonesia.
+                                        Free Domain & SSL + Divi Premium</small>
+                                </h5>
+                                <h5 class="tree-steps-hosting-plans-title">
+                                    <span class="tree-steps-hosting-plans-price monthly">
+                                        <!-- steps hosting plan price -->
+                                        <b class="monthly">Rp.9.000<small>/bln</small></b>
+                                        <b class="yearly">Rp.90.000<small>/Tahun</small></b>
+                                    </span>
+
+                                </h5>
                                 <!-- steps hosting plan title -->
-                                <span class="tree-steps-hosting-plans-price monthly">
-                                    <!-- steps hosting plan price -->
-                                    <b class="monthly">$12<small>/month</small></b>
-                                    <b class="yearly">$133<small>/year</small></b>
-                                </span>
+
                                 <!-- steps hosting plan price -->
+
                             </div>
 
                             <div id="first-plan-hosting-steps-content" class="tree-steps-hosting-plans-body first-plan-hosting-steps">
@@ -625,17 +647,24 @@
                     <!--------------------------------------------- second plan --------------------------------------------->
                     <div class="col-md-4">
                         <!-- tree steps hosting plan -->
-                        <div class="tree-steps-hosting-plans second">
-                            <span class="tree-steps-hosting-plans-best">best plan</span>
+                        <div class="tree-steps-hosting-plans first">
+
                             <div class="tree-steps-hosting-plans-header">
                                 <i class="fas fa-fire tree-steps-hosting-plans-icon"></i>
-                                <h5 class="tree-steps-hosting-plans-title">advenced plan <small>for small projects</small></h5>
+                                <h5 class="tree-steps-hosting-plans-title">Corporate Hosting
+                                    <small>Hosting yang mampu menyediakan resource bagi sistem
+                                        atau web manajemen untuk korporasi</small>
+                                </h5>
+                                <h5 class="tree-steps-hosting-plans-title">
+                                    <span class="tree-steps-hosting-plans-price monthly">
+                                        <!-- steps hosting plan price -->
+                                        <b class="monthly">Rp.60.000<small>/bln</small></b>
+                                        <b class="yearly">Rp.150.000<small>/Tahun</small></b>
+                                    </span>
+
+                                </h5>
                                 <!-- steps hosting plan title -->
-                                <span class="tree-steps-hosting-plans-price monthly">
-                                    <!-- steps hosting plan price -->
-                                    <b class="monthly">$15<small>/month</small></b>
-                                    <b class="yearly">$140<small>/year</small></b>
-                                </span>
+
                                 <!-- steps hosting plan price -->
                             </div>
 
@@ -737,16 +766,24 @@
                     <!--------------------------------------------- third plan --------------------------------------------->
                     <div class="col-md-4">
                         <!-- tree steps hosting plan -->
-                        <div class="tree-steps-hosting-plans third">
+                        <div class="tree-steps-hosting-plans second">
+                            <span class="tree-steps-hosting-plans-best">best plan</span>
                             <div class="tree-steps-hosting-plans-header">
                                 <i class="fas fa-fire tree-steps-hosting-plans-icon"></i>
-                                <h5 class="tree-steps-hosting-plans-title">entreprise plan <small>for big projects</small></h5>
+                                <h5 class="tree-steps-hosting-plans-title">Mix & Match
+                                    <small>Cloud Hosting yang memungkinkan kamu memaksimalkan resource sesuai dengan kebutuhan.
+                                        Bisa custom hosting, Sob!</small>
+                                </h5>
+                                <h5 class="tree-steps-hosting-plans-title">
+                                    <span class="tree-steps-hosting-plans-price monthly">
+                                        <!-- steps hosting plan price -->
+                                        <b class="monthly">Rp.90.000<small>/bln</small></b>
+                                        <b class="yearly">Rp.250.000<small>/Tahun</small></b>
+                                    </span>
+
+                                </h5>
                                 <!-- steps hosting plan title -->
-                                <span class="tree-steps-hosting-plans-price monthly">
-                                    <!-- steps hosting plan price -->
-                                    <b class="monthly">$19<small>/month</small></b>
-                                    <b class="yearly">$199<small>/year</small></b>
-                                </span>
+
                                 <!-- steps hosting plan price -->
                             </div>
 
@@ -821,96 +858,6 @@
         </div><!-- end container -->
     </section><!-- end second hosting plans -->
 
-    <section class="our-pertners">
-        <!-- starts our pertners section -->
-        <div class="container">
-            <!-- CONTAINER -->
-            <h2 class="d-none">our pertners</h2>
-            <div class="owl-carousel pertners-carousel owl-theme">
-                <!-- start owl carousel -->
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo1.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo2.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo3.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo4.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo5.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo1.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo2.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo3.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo4.png" alt="" /> </a>
-                </div><!-- end item -->
-
-                <div class="item">
-                    <!-- start item -->
-                    <a href="#"> <img src="main/img/pertners/logo5.png" alt="" /> </a>
-                </div><!-- end item -->
-
-            </div><!-- end owl carousel -->
-
-        </div><!-- end CONTAINER -->
-    </section><!-- end our pertners section -->
-
-
-
-    <section class="perlex-efect-section parallax-window" data-parallax="scroll" data-image-src="main/img/demo/bg.jpeg">
-        <!-- start parallax section -->
-        <span class="perlex-hidden-iverlow"></span>
-        <div class="container">
-            <!-- start container -->
-            <div class="row justify-content-left">
-                <!-- start row -->
-                <div class="col-md-5">
-                    <div class="video-section-text-place">
-                        <span class="over-ole-grandient-orl"></span>
-                        <h5>Chose your best pricing plan</h5><!-- title -->
-                        <span class="post-category">hosting</span> <span class="post-date">19 march 2018</span><!-- category -->
-                        <p>Solution is an easy to use tool all very easy! eCommerce. With the help of our system you can present.</p><!-- text -->
-                        <a href="#">read more</a><!-- link -->
-                    </div>
-                </div>
-
-                <div class="col-md-7 video-section-play-place">
-                    <!-- video popup link -->
-                    <a class="video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0" data-target="#videomodal" href="#"><i class="fas fa-play"></i> <span class="first-text"><b>play</b> video</span> <span class="second-text"><b>click</b> here</span></a>
-                </div><!-- end popup link -->
-            </div><!-- end row -->
-
-        </div><!-- end container -->
-    </section><!-- end parallax section -->
-
 
 
     <section class="our-sevices-section">
@@ -937,7 +884,7 @@
                 <!-- start item -->
                 <a class="nav-link">
                     <i class="flaticon-063-circuit"></i>
-                    <span class="title-tabs-of">web hosting</span><!-- title -->
+                    <span class="title-tabs-of">Web hosting</span><!-- title -->
                 </a>
             </li><!-- end item -->
 
@@ -945,7 +892,7 @@
                 <!-- start item -->
                 <a class="nav-link">
                     <i class="flaticon-063-smartphone"></i>
-                    <span class="title-tabs-of">resslers</span><!-- title -->
+                    <span class="title-tabs-of">Reseller</span><!-- title -->
                 </a>
             </li><!-- end item -->
 
@@ -953,7 +900,7 @@
                 <!-- start item -->
                 <a class="nav-link">
                     <i class="flaticon-063-ufo"></i>
-                    <span class="title-tabs-of">support</span><!-- title -->
+                    <span class="title-tabs-of">Support</span><!-- title -->
                 </a>
             </li><!-- end item -->
 
@@ -961,7 +908,7 @@
                 <!-- start item -->
                 <a class="nav-link">
                     <i class="flaticon-063-test-tube"></i>
-                    <span class="title-tabs-of">cloud hosting</span><!-- title -->
+                    <span class="title-tabs-of">Cloud Hosting</span><!-- title -->
                 </a>
             </li><!-- end item -->
 
@@ -1066,206 +1013,34 @@
     </section><!-- end our full secvices -->
 
 
-
-    <section class="homepage-domain-section padding-80-100-100">
-
-        <div class="container">
-
-
-            <div class="row justify-content-center domain-homepage-anouncement-hero">
-                <!-- row -->
-                <div class="col-md-6 mt-auto mb-auto">
-                    <!-- col -->
-                    <h4 class="domain-homepage-anouncement-title">Why do you need a <br>domain name?</h4><!-- title -->
-                    <p class="domain-homepage-anouncement-sub-title"> The most successful businesses use the same set of words and images in all customer touchpoints – on their website, in their emails and order confirmations, on their signs, etc.</p><!-- text -->
-                    <p class="domain-homepage-anouncement-sub-title-two"> This is branding at its simplest. And the digital pieces of your brand all spring from your domain name.</p><!-- text -->
-                    <br>
-
-                    <!--------------------------------------------- first domain anoncment order --------------------------------------------->
-
-                    <!-- The domain anoncment order -->
-                    <div id="fisrt-domains-offre-content" class="domain-homepage-anouncement-speacial">
-                        <span class="domain-tci">.tel</span>
-                        <!-- The domain anoncment name -->
-                        <a id="fisrt-domains-offre" class="domain-tci-order"><span>register</span></a>
-                        <!-- The domain anoncment register button -->
-                        <div class="domain-tci-buttons">
-                            <!-- The domain anoncment finel buttons -->
-                            <i id="fisrt-domains" data-toggle="tooltip" data-placement="top" title="add to cart" class="far fa-check-circle domain-tci-check"></i>
-                            <i id="fisrt" data-toggle="tooltip" data-placement="top" title="cancel order" class="far fa-times-circle domain-tci-cancel"></i>
-                        </div>
-                        <!-- end domain anoncment finel buttons -->
-                        <form class="domain-homepage-anouncement-speacial-form">
-                            <!-- The domain anoncment order form -->
-                            <input placeholder="entre your domain name" type="text" class="form-control input-search-text-special" required="">
-                        </form>
-                        <!-- end domain anoncment order form -->
-
-                        <div class="domain-tci-added-to-card-mesage">
-                            <!-- The domain anoncment success message -->
-                            <span>this domain added successfully to your cart <a href="#">checkout</a></span>
-                        </div>
-                        <!-- end domain anoncment success message -->
-                    </div>
-                    <!-- end domain anoncment order -->
-
-                    <!--------------------------------------------- second domain anoncment order --------------------------------------------->
-
-                    <div id="second-domains-offre-content" class="domain-homepage-anouncement-speacial">
-                        <span class="domain-tci">.one</span>
-                        <!-- The domain anoncment name -->
-                        <a id="second-domains-offre" class="domain-tci-order"><span>register</span></a>
-                        <!-- The domain anoncment register button -->
-                        <div class="domain-tci-buttons">
-                            <!-- The domain anoncment finel buttons -->
-                            <i id="second-domains" data-toggle="tooltip" data-placement="top" title="add to cart" class="far fa-check-circle domain-tci-check"></i>
-                            <i id="second" data-toggle="tooltip" data-placement="top" title="cancel order" class="far fa-times-circle domain-tci-cancel"></i>
-                        </div>
-                        <!-- end domain anoncment finel buttons -->
-                        <form class="domain-homepage-anouncement-speacial-form">
-                            <!-- The domain anoncment order form -->
-                            <input placeholder="entre your domain name" type="text" class="form-control input-search-text-special" required="">
-                        </form>
-                        <!-- end domain anoncment order form -->
-
-                        <div class="domain-tci-added-to-card-mesage">
-                            <!-- The domain anoncment success message -->
-                            <span>this domain added successfully to your cart <a href="#">checkout</a></span>
-                        </div>
-                        <!-- end domain anoncment success message -->
-                    </div>
-                    <!-- end domain anoncment order -->
-
-                    <!--------------------------------------------- third domain anoncment order --------------------------------------------->
-
-                    <div id="third-domains-offre-content" class="domain-homepage-anouncement-speacial">
-                        <span class="domain-tci">.hosting</span>
-                        <!-- The domain anoncment name -->
-                        <a id="third-domains-offre" class="domain-tci-order"><span>register</span></a>
-                        <!-- The domain anoncment register button -->
-                        <div class="domain-tci-buttons">
-                            <!-- The domain anoncment finel buttons -->
-                            <i id="third-domains" data-toggle="tooltip" data-placement="top" title="add to cart" class="far fa-check-circle domain-tci-check"></i>
-                            <i id="third" data-toggle="tooltip" data-placement="top" title="cancel order" class="far fa-times-circle domain-tci-cancel"></i>
-                        </div>
-                        <!-- end domain anoncment finel buttons -->
-                        <form class="domain-homepage-anouncement-speacial-form">
-                            <!-- The domain anoncment order form -->
-                            <input placeholder="entre your domain name" type="text" class="form-control input-search-text-special" required="">
-                        </form>
-                        <!-- end domain anoncment order form -->
-
-                        <div class="domain-tci-added-to-card-mesage">
-                            <!-- The domain anoncment success message -->
-                            <span>this domain added successfully to your cart <a href="#">checkout</a></span>
-                        </div>
-                        <!-- end domain anoncment success message -->
-                    </div>
-                    <!-- end domain anoncment order -->
-
-                </div><!-- end col -->
-
-                <div class="col-md-6 row justify-content-center phone-no-sidepadding">
-                    <div class="col-md-6">
-                        <!-- col -->
-                        <div class="domain-homepage-anouncement-box">
-                            <!-- domain features box -->
-                            <div class="domain-homepage-anouncement-box-img">
-                                <img src="main/img/svgs/book.svg" alt="" />
-                            </div>
-                            <h5>Stake your claim</h5>
-                            <p>Registering domains related to your big idea or business name keeps others from using those names to pull traffic away from your website.</p>
-
-                        </div><!-- end domain features box -->
-
-                        <div class="domain-homepage-anouncement-box">
-                            <!-- domain features box -->
-                            <div class="domain-homepage-anouncement-box-img">
-                                <img src="main/img/svgs/ring.svg" alt="" />
-                            </div>
-                            <h5>Take control</h5>
-                            <p>With a domain name, you can send customers, friends and prospects wherever you want – whether that’s a website, blog, social page or storefront.</p>
-
-                        </div><!-- end domain features box -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-6">
-                        <!-- col -->
-                        <div class="domain-homepage-anouncement-box margin-top-150">
-                            <!-- domain features box -->
-                            <div class="domain-homepage-anouncement-box-img">
-                                <img src="main/img/svgs/dollar.svg" alt="" />
-                            </div>
-                            <h5>Protect your rights</h5>
-                            <p>Your domain gives you an exclusive piece of digital real estate that cannot be used by anyone else as long as it’s registered to you.</p>
-
-                        </div><!-- end domain features box -->
-
-                    </div><!-- end col -->
-
-                </div><!-- end row -->
-
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </section><!-- end domain search homepage -->
-
-
-
-    <section class="counter-section">
-        <!-- start counter section -->
-        <div class="container">
-            <div class="counter-middle-icon">
-                <span class="icon-counter-sid"><i class="flaticon-063-molecules-1"></i></span><!-- icon -->
-                <h2 class="icon-counter-sid-title">our company <b>funny facts</b></h2><!-- title -->
-            </div>
-            <div class="row justify-content-center">
-                <!-- row -->
-                <div class="col-md-4 counter-number-tibo"><i class="flaticon-database-8"></i> <span><small class="counter">99.99</small>%</span> <b>off our server working now</b></div><!-- counter -->
-                <div class="col-md-4 counter-number-tibo pad-top-190"><i class="flaticon-plug"></i><span> <small class="counter">122</small></span><b>new website this week</b></div><!-- counter -->
-                <div class="col-md-4 counter-number-tibo"><i class="flaticon-shield-5"></i><span> <small class="counter">973.07</small>$</span> <b>checkout this day</b></div><!-- counter -->
-            </div><!-- end row -->
-
-        </div><!-- end container -->
-    </section><!-- end counter section -->
-
-
-
-
     <section class="server-place-section">
+        <div class="container">
+            <div class="tittle-simple-one">
+
+                <b>
+                    <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        <i class="fa-solid fa-database"> O u r Data Center
+                    </h2></i>
+                </b>
+                <br>
+            </div><!-- end title -->
+        </div><!-- end container -->
+
         <!-- start our servers place section -->
         <div class="container zindextow">
             <!-- start container -->
             <div class="row justify-content-center">
-                <!-- start row -->
-                <div class="col-md-5 row justify-content-center text-reve-map-place">
-                    <div class="col-md-6">
-                        <h5>brazil</h5><!-- title -->
-                        <p><span>address</span> tchuk slov 133, contral park,brazil</p><!-- address -->
-                        <p><span>phone</span>00213 123-45-67-89
-                            <!-- phones -->
-                            <br>00213 123-45-67-89
-                        </p><!-- phones -->
-                        <p><span>email</span> support@coodiv.net</p><!-- email -->
-                    </div>
 
-                    <div class="col-md-6">
-                        <h5>paris</h5><!-- title -->
-                        <p><span>address</span> tchuk slov 133, contral park,paris</p><!-- address -->
-                        <p><span>phone</span>00213 123-45-67-89
-                            <!-- phones -->
-                            <br>00213 123-45-67-89
-                        </p><!-- phones -->
-                        <p><span>email</span> support@coodiv.net</p><!-- email -->
-                    </div>
-                </div>
+                <!-- start row -->
 
                 <div class="col-md-7">
                     <!-- col -->
                     <div class="map-gene-server-place">
                         <!-- start map place -->
                         <img src="main/img/map/map-world.png" alt="" /><!-- map -->
-                        <span data-toggle="tooltip" data-placement="top" title="brazil" style="top: 68%;left: 33%;" class="place"></span>
-                        <span data-toggle="tooltip" data-placement="top" title="paris" style="top: 35%;left: 47%;" class="place"></span>
+                        <span data-toggle="tooltip" data-placement="top" title="Singapore" style="top: 55%;left: 75%;" class="place"><b>SG</b></span>
+                        <span data-toggle="tooltip" data-placement="top" title="United State" style="top: 25%;left: 17%;" class="place"><b>US</b></span>
+                        <span data-toggle="tooltip" data-placement="top" title="Indonesia" style="top: 61%;left: 80%;" class="place"><b>ID</b></span>
                     </div><!-- end map place -->
                 </div><!-- end col -->
 
@@ -1281,7 +1056,7 @@
             <!-- start container -->
 
             <div class="tittle-simple-one">
-                <h5>The latest news in our blog<span>Lorem Ipsum Dolor Sit Amet Lorem<br> Lorem Ipsum Dolor.</span></h5>
+                <h5>FAQ<span>Yang seting ditanyakan sama Sobat Jagoan</span></h5>
             </div><!-- title -->
 
             <div class="row justify-content-center blog-items-home">
@@ -1293,8 +1068,8 @@
                         <!-- blog container -->
                         <div class="post-thumbn parallax-window" style="background: url(main/img/blog/blog4.png) no-repeat center;"></div><!-- post thumbnail -->
                         <div class="post-bodyn">
-                            <h5><a href="#">Up and Running With WooCommerce</a></h5><!-- post title -->
-                            <p><i class="far fa-calendar"></i>Mars 02,2018</p><!-- post date -->
+                            <h5><a href="#">Apa itu Hosting ?</a></h5><!-- post title -->
+
                         </div>
                     </div><!-- end blog container -->
                 </div><!-- end col -->
@@ -1305,8 +1080,8 @@
                         <!-- blog container -->
                         <div class="post-thumbn parallax-window" style="background: url(main/img/blog/blog3.png) no-repeat center;"></div><!-- post thumbnail -->
                         <div class="post-bodyn">
-                            <h5><a href="#">Up and Running With WooCommerce</a></h5><!-- post title -->
-                            <p><i class="far fa-calendar"></i>Mars 02,2018</p><!-- post date -->
+                            <h5><a href="#">Mengapa Memilih Jagoan Hosting Indonesia?</a></h5><!-- post title -->
+
                         </div>
                     </div><!-- end blog container -->
                 </div><!-- end col -->
@@ -1317,8 +1092,8 @@
                         <!-- blog container -->
                         <div class="post-thumbn parallax-window" style="background: url(main/img/blog/blog2.png) no-repeat center;"></div><!-- post thumbnail -->
                         <div class="post-bodyn">
-                            <h5><a href="#">Up and Running With WooCommerce</a></h5><!-- post title -->
-                            <p><i class="far fa-calendar"></i>Mars 02,2018</p><!-- post date -->
+                            <h5><a href="#">Bagaimana Cara membeli Paket di Jagoan Hosting Indonesia ?</a></h5><!-- post title -->
+
                         </div>
                     </div><!-- end blog container -->
                 </div><!-- end col -->
@@ -1328,57 +1103,6 @@
         </div><!-- end container -->
     </section><!-- end blog section -->
 
-
-
-
-
-    <section class="form-contact-home-section">
-        <!-- start contact us section -->
-        <div class="container">
-            <!-- start container -->
-            <div class="row justify-content-center">
-                <!-- start row -->
-                <form class="col-md-8 row justify-content-center form-contain-home" id="ajax-contact" method="post" action="mailer.php">
-                    <!-- start form -->
-                    <h5>Any Project In Your Mind ?<span>Or Just Say Hello</span></h5><!-- title -->
-
-                    <div id="form-messages"></div><!-- form message -->
-
-                    <div class="col-md-6">
-                        <!-- start col -->
-                        <div class="field input-field">
-                            <input class="form-contain-home-input" type="text" id="name" name="name" required><!-- input -->
-                            <span class="input-group-prepend">entre your name</span><!-- label -->
-                        </div>
-                    </div><!-- end col -->
-
-                    <div class="col-md-6">
-                        <!-- start col -->
-                        <div class="field input-field">
-                            <input class="form-contain-home-input" type="email" id="email" name="email" required><!-- input -->
-                            <span class="input-group-prepend">entre your email</span><!-- label -->
-                        </div>
-                    </div><!-- end col -->
-
-                    <div class="col-md-12">
-                        <!-- start col -->
-                        <div class="field input-field">
-                            <textarea class="form-contain-home-input" id="message" name="message" required></textarea><!-- textarea -->
-                            <span class="input-group-prepend">entre your message</span><!-- label -->
-                        </div>
-                    </div><!-- end col -->
-
-                    <div class="btn-holder-contect">
-                        <button type="submit">Send</button><!-- submit button -->
-                    </div>
-
-                </form><!-- end form -->
-
-
-
-            </div><!-- end container -->
-        </div><!-- end container -->
-    </section><!-- end contact us section -->
 
     <section class="footer-coodiv-thm pding-200">
         <!-- start footer section -->
@@ -1390,42 +1114,41 @@
                 <div class="col-md-4">
                     <!-- col -->
                     <a class="footer-brand" href="#">
-                        <img src="main/img/header/logo.png" alt="">
+                        <img src="image/jagoanhosting.png" alt="">
                     </a>
 
-                    <a class="footer-contact-a-hm"><i class="fas fa-life-ring"></i> 00213-123-45-67-89</a> <!-- phone nubmer -->
-                    <a class="footer-contact-a-hm"><i class="fas fa-microphone"></i> support@coodiv.net</a> <!-- email -->
-                    <a class="footer-contact-a-hm"><i class="fas fa-map-marker-alt"></i> 28 Green Tower, Central City , New York City, USA</a> <!-- address -->
+                    <a class="footer-contact-a-hm"><i class="fas fa-life-ring"></i> 0821 3545 2179 (Chat Only)</a> <!-- phone nubmer -->
+                    <a class="footer-contact-a-hm"><i class="fas fa-microphone"></i> support@jagoanhosting.com</a> <!-- email -->
+                    <a class="footer-contact-a-hm"><i class="fas fa-map-marker-alt"></i> Jl. MT Haryono No. 1 Blok C4 / Malang</a> <!-- address -->
                 </div><!-- end col -->
 
                 <div class="col-md-2 quiq-links-footer-mb-st">
                     <!-- col -->
-                    <h5 class="footer-title-simple">Quick Links</h5><!-- title -->
+                    <h5 class="footer-title-simple">Produk & Layanan</h5><!-- title -->
                     <ul class="main-menu-footer-mn">
-                        <li><a href="index.html">homepage</a></li><!-- link -->
-                        <li><a href="about-us.html">about us</a></li><!-- link -->
-                        <li><a href="domain-search.html">domains</a></li><!-- link -->
-                        <li><a href="reseller-hosting.html">reseller hosting</a></li><!-- link -->
-                        <li><a href="web-hosting.html">web-hosting</a></li><!-- link -->
+                        <li><a href="#">Hosting Murah</a></li><!-- link -->
+                        <li><a href="#">Hosting Enterprise </a></li><!-- link -->
+                        <li><a href="#">VPS Indonesia</a></li><!-- link -->
+                        <li><a href="#">Reseller Hosting</a></li><!-- link -->
+                        <li><a href="#">Email Hosting</a></li><!-- link -->
                     </ul>
                 </div><!-- end col -->
 
                 <div class="col-md-2 quiq-links-footer-mb-st">
                     <!-- col -->
-                    <h5 class="footer-title-simple">About Us</h5><!-- title -->
+                    <h5 class="footer-title-simple">Link Partner</h5><!-- title -->
                     <ul class="main-menu-footer-mn">
-                        <li><a href="knowledgebase.html">knowledgebase</a></li><!-- link -->
-                        <li><a href="help-center.html">help-center</a></li><!-- link -->
-                        <li><a href="404.html">404 page</a></li><!-- link -->
-                        <li><a href="blog.html">blog</a></li><!-- link -->
-                        <li><a href="contact.html">contact</a></li><!-- link -->
+                        <li><a href="#">Afliasi</a></li><!-- link -->
+                        <li><a href="#">Promo & Diskon</a></li><!-- link -->
+                        <li><a href="#">Program Referral</a></li><!-- link -->
+
                     </ul>
                 </div><!-- end col -->
 
 
                 <div class="col-md-3 stay-in-tch-footer-mb-st">
                     <!-- col -->
-                    <h5 class="footer-title-simple">Stay In Touch</h5><!-- title -->
+                    <h5 class="footer-title-simple">Dapatkan Informasi Terbaru</h5><!-- title -->
                     <form class="form-contain-home-subscribe">
                         <!-- subscribe form -->
                         <input type="email" id="email-subscribe" name="email-subscribe" placeholder="entre your email please" required>
@@ -1439,12 +1162,30 @@
                         <a class="googlecc" href="#"><i class="fab fa-google-plus-g"></i></a>
                         <a class="dribbblecc" href="#"><i class="fab fa-dribbble"></i></a>
                     </div><!-- end social icons -->
-                    <p class="copyright-footer-p">© 2018 Coodiv. Made with Love in Algeria.</p><!-- copyright text -->
+                    <p class="copyright-footer-p">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        PT BEON INTERMEDIA since 2006. Developed by Rajendra Rakha A P
+                    </p><!-- copyright text -->
 
-                </div><!-- end col -->
+                </div>
+                <div class="pembayaran" style="align-items: center;text-align: center;">>
+                    <!-- end col -->
+                    <h5 class="footer-title-simple">Pembayaran</h5><!-- title -->
 
-            </div><!-- end row -->
-        </div><!-- end container -->
+
+                    <div>
+                        <img src="https://www.jagoanhosting.com/wp-content/uploads/2017/07/method-pembayaran.png.webp" alt="" />
+
+                    </div><!-- end col -->
+                </div>
+
+
+
+            </div><!-- end container -->
+        </div>
     </section><!-- end footer section -->
 
 

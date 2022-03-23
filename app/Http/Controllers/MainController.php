@@ -5,8 +5,14 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
+    
     Public function index(){
 
         return view('main.index');
+    }
+
+    Public function login(){
+
+        return view('auth.login');
     }
 }
