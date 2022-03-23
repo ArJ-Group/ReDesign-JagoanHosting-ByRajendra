@@ -11,8 +11,4 @@ class MainController extends Controller
         return view('main.index');
     }
 
-    Public function login(){
-
-        return view('auth.login');
-    }
 }

@@ -380,7 +380,8 @@
                         <li class="nav-item dropdown">
                             @if (Route::has('login'))
 
-                            <a data-toggle="dropdown" aria-haspopup="true" id="customarea" aria-expanded="false" class="accouting-h dropdown-toggle" href="{{ route('login') }}"><img src="main/img/svgs/avatar.svg" alt="" /></a>
+                            <a aria-haspopup="true" id="customarea" aria-expanded="false" class="accouting-h dropdown-toggle" href="{{ route('login') }}">
+                                <img src="main/img/svgs/avatar.svg" alt="" /></a>
                             @auth
                             @else
                             @endauth
