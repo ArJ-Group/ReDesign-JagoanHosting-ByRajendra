@@ -41,7 +41,7 @@
             <div class="container h-full">
 
                 <!-- Logo -->
-                <a href="/" class="shrink-0">
+                <a href="/" class="shrink-0"></a>
 
                     <img src="image/jagoanhosting.png" class="hidden max-h-7 dark:block" />
                 </a>
@@ -51,14 +51,14 @@
 
                     <div class="col-span-6 flex h-full flex-col items-center justify-center py-10 md:items-start md:py-20 xl:col-span-4">
                         <h1 class="text-jacarta-700 font-display mb-6 text-center text-5xl dark:text-white md:text-left  xl:text-7xl">
-                            Dikon Up To 25% Super Duper Hemat di SuperMaret
+                            Diskon Up To 25% Super Duper Hemat di SuperMaret
                         </h1>
                         <p class="dark:text-jacarta-300 mb-8 text-center text-lg md:text-left">
                             Dapatkan harga Domain, Hosting, dan VPS terhemat bulan ini, hanya di Jagoan Hosting.
                         </p>
 
                         <div class="flex space-x-4">
-                            <a href="/main" class="bg-accent shadow-accent-volume hover:bg-accent-dark w-36 rounded-full py-3 text-center font-semibold text-white transition-all">
+                            <a href="{{ url('/index') }}" class="bg-accent shadow-accent-volume hover:bg-accent-dark w-36 rounded-full py-3 text-center font-semibold text-white transition-all">
                                 Explore Now
                             </a>
                             

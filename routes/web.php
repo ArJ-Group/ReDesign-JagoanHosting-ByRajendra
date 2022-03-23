@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/main', [MainController::class,'index']);
+Route::get('/index', [App\Http\Controllers\MainController::class,'index']);
 
 Auth::routes();
 
