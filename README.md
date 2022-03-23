@@ -9,7 +9,9 @@
 <h1>
 <p align="center">PREVIEW DESIGN</p>
 </h1>
+<p align="center">By : Rajendra Rakha Arya Prabaswara</p>
 
 ![127 0 0 1_8000_ (1)](https://user-images.githubusercontent.com/75615789/159725106-69fb1050-b61b-430a-a8f5-15cbb1d2ef90.png)
+
 ![image](https://user-images.githubusercontent.com/75615789/159724706-8daf86d1-ff44-4f14-b876-f308cbb3473f.png)
 
