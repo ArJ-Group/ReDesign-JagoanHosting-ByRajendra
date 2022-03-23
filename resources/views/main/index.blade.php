@@ -160,7 +160,6 @@
             </div>
         </footer>
         <script src="landing/js/app.bundle.js"></script>
-        
 </body>
 
 </html>
